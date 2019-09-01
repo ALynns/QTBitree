@@ -36,6 +36,7 @@ Status BiTNode::createBiTree(QString s)
 	if (l > i)
 		l = 0;
 
+
 	if (s[i] == '#')
 		return OK;
     data = s[i];

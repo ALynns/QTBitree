@@ -14,13 +14,13 @@ BitreeMainWindow::BitreeMainWindow(QWidget *parent):QMainWindow(parent),ui(new U
 
     QMenuBar *pMenuBar = menuBar();
 
-    //å·¥å…·æ åˆ›å»º
-    menuBarHelp= new QMenu(tr("å¸®åŠ©(Alt+&H)"));
-    //å·¥å…·æ èœå•åˆ›å»º
-    actionHelpOpen = new QAction(tr("å…³äºŽè½¯ä»¶"), this);
+    //¹¤¾ßÀ¸´´½¨
+    menuBarHelp= new QMenu(QStringLiteral("°ïÖú(Alt+&H)"));
+    //¹¤¾ßÀ¸²Ëµ¥´´½¨/
+    actionHelpOpen = new QAction(QStringLiteral("¹ØÓÚÈí¼þ"), this);
     actionHelpOpen->setShortcut(Qt::CTRL | Qt::Key_A);
     menuBarHelp->addAction(actionHelpOpen);
-    //å°†èœå•æ·»åŠ è‡³å·¥å…·æ æŒ‰é’®
+    //½«²Ëµ¥Ìí¼ÓÖÁ¹¤¾ßÀ¸°´Å¥
     pMenuBar->addMenu(menuBarHelp);
 
     preString=new QString;
@@ -128,7 +128,7 @@ void BitreeMainWindow::bitreeDisplayButton_clicked()
 void BitreeMainWindow:: actionHelpButton_clicked()
 {
     QMessageBox *helpMessageBox;
-    QString helpString=tr("åŒæµŽå¤§å­¦è®¡ç®—æœºç³»2019å¹´è¯¾ç¨‹è®¾è®¡ ä½œè€…ï¼šå¤å­å¯’ å­¦å·ï¼š1753935");
+    QString helpString=QStringLiteral("Í¬¼Ã´óÑ§¼ÆËã»úÏµ2019Äê¿Î³ÌÉè¼Æ\n×÷Õß£ºÏÄ×Óº®\nÑ§ºÅ£º1753935");
     helpMessageBox=new QMessageBox("About",helpString,QMessageBox::Information,QMessageBox::Ok,0,0);
     helpMessageBox->exec();
 }
